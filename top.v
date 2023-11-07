@@ -142,7 +142,7 @@ module top(
 	assign ADRst3=ADRst;
 
 	
-	wire clk_out1;
+	wire   clk_out1;
 	assign Clk1= (Clk)? clk_out1:1'b0;
 	assign Clk2=  (Clk)? clk_out1:1'b0;
 	assign Clk3=  (Clk)? clk_out1:1'b0;
@@ -224,8 +224,8 @@ always @(negedge OSC_in) begin
 	end
 	//load the address bits into digital potentiometer
    LOADAR: begin
-	   Resbitcount<=Resbitcount+1'b1;
-	   ResCS <= 0;
+	    Resbitcount<=Resbitcount+1'b1;
+	    ResCS <= 0;
 		ResClkE<=1;
 		ResSDI1<=ResCScount[2-Resbitcount];
 		ResSDI2<=ResCScount[2-Resbitcount];
@@ -237,7 +237,7 @@ always @(negedge OSC_in) begin
 	end
 	//load data bits into digital potentiometer
 	LOADR: begin
-	   Resbitcount<=Resbitcount+1'b1;
+	    Resbitcount<=Resbitcount+1'b1;
 		count<=count+1'b1;
 		ResClkE<=1;
 		ResCS <= 0;
@@ -511,32 +511,3 @@ always @(negedge OSC_in) begin
 	
 
 endmodule
-/*
-module slow_counter( clock, slow_clock);
-		
-		input wire clock;
-		output reg slow_clock;
-		
-		reg [31:0] counter;
-		
-		initial
-		begin
-				slow_clock = 0;
-				counter = 32'b0;
-		end
-		
-		
-		always @(posedge clock)
-		begin
-			if(counter[7])
-			begin
-			counter <= 0;
-			slow_clock <= ~slow_clock;
-			end
-			else
-			begin
-						counter <= counter + 1 ;
-				slow_clock <= slow_clock;
-			end
-		end
-endmodule*/

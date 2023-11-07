@@ -43,16 +43,16 @@ module toptest;
 	.Sin3(Sin3),
     .Sin6(Sin6),
     .Sin5(Sin5),
-     .Sin4(Sin4),
+    .Sin4(Sin4),
     .Sin2(Sin2),
     .Sin1(Sin1),
     .Sin7(Sin7),
    	.Sin8(Sin8),
-    	.Sin9(Sin9),
-    	.Sin10(Sin10),
-    	.Sin11(Sin11),
-    	.Sin12(Sin12),
-    	.Sin14(Sin14),
+    .Sin9(Sin9),
+    .Sin10(Sin10),
+    .Sin11(Sin11),
+    .Sin12(Sin12),
+    .Sin14(Sin14),
    	.Sin15(Sin15),
    	.Sin16(Sin16),
 	.Clk1(Clk1),
@@ -60,38 +60,38 @@ module toptest;
 	.Clk3(Clk3),
 	.Clk4(Clk4), 
   	.RS1(RS1),
-    	.RS2(RS2),
-    	.RS3(RS3),
-    	.RS4(RS4),
+    .RS2(RS2),
+    .RS3(RS3),
+    .RS4(RS4),
    	.RS5(RS5),
-    	.RS6(RS6),
-    	.RS7(RS7),
-    	.RS8(RS8),
-    	.ADMode_1(ADMode_1),
-    	.ADMode_2(ADMode_2),
-    	.ADMode_3(ADMode_3),
-    	.ADMode1_1(ADMode1_1),
-    	.ADMode1_2(ADMode1_2),
-    	.ADMode1_3(ADMode1_3),
-    	.ADRst1(ADRst1),
-    	.ADRst2(ADRst2),
-    	.ADRst3(ADRst3),
-    	.ADClk1(ADClk1),
-    	.ADClk2(ADClk2),
-    	.ADClk3(ADClk3),
-    	.ADSout1(ADSout1),
-    	.ADSout2(ADSout2),
-    	.ADSout3(ADSout3),
-    	.ADSout4(ADSout4),
-    	.ADSout5(ADSout5),
-    	.ADSout6(ADSout6),
-    	.ADSout7(ADSout7),
-    	.ADSout8(ADSout8),
+    .RS6(RS6),
+    .RS7(RS7),
+    .RS8(RS8),
+    .ADMode_1(ADMode_1),
+    .ADMode_2(ADMode_2),
+    .ADMode_3(ADMode_3),
+    .ADMode1_1(ADMode1_1),
+    .ADMode1_2(ADMode1_2),
+    .ADMode1_3(ADMode1_3),
+    .ADRst1(ADRst1),
+    .ADRst2(ADRst2),
+    .ADRst3(ADRst3),
+    .ADClk1(ADClk1),
+    .ADClk2(ADClk2),
+    .ADClk3(ADClk3),
+    .ADSout1(ADSout1),
+    .ADSout2(ADSout2),
+    .ADSout3(ADSout3),
+    .ADSout4(ADSout4),
+    .ADSout5(ADSout5),
+    .ADSout6(ADSout6),
+    .ADSout7(ADSout7),
+    .ADSout8(ADSout8),
 	.ADSout15(ADSout15), 
-    	.Sout1(Sout1),
-    	.Sout2(Sout2),
-    	.Sout3(Sout3),
-    	.Sout4(Sout4),
+    .Sout1(Sout1),
+    .Sout2(Sout2),
+    .Sout3(Sout3),
+    .Sout4(Sout4),
 	.ClkOut(ClkOut), 
 	.DataOut(DataOut), 
 	.ResCS3(ResCS3),
@@ -119,25 +119,25 @@ module toptest;
      $dumpvars;
         // Initialize signals
 
-	OSC_in = 0;
-	clk_out1= 0; 
-	ADSout1 = 0;
-	ADSout2 = 0;
-	ADSout3 = 0;
-	ADSout4 = 0;
-	ADSout5 = 0;
-	ADSout6 = 0;
-	ADSout7 = 0;
-	ADSout8 = 0;
-	ADSout15 = 0;
+	 OSC_in = 0;
+	 clk_out1= 0; 
+	 ADSout1 = 0;
+	 ADSout2 = 0;
+	 ADSout3 = 0;
+	 ADSout4 = 0;
+	 ADSout5 = 0;
+	 ADSout6 = 0;
+	 ADSout7 = 0;
+	 ADSout8 = 0;
+	 ADSout15 = 0;
 
-	pushbutton = 0;
-	#1000
-	pushbutton = 1;
-	#1000000000
+	 pushbutton = 0;
+	 #1000
+	 pushbutton = 1;
+	 #1000000000
 		
-	pushbutton = 0;
-	#8000
+	 pushbutton = 0;
+	 #8000
         $finish;  // End the simulation
     end
 
